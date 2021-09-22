@@ -193,21 +193,24 @@
 
         <div class="row d-flex align-items-center">
             <div class="col-md-6">
+              <div class="form-group">
                 <form>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput">Nome completo</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome Sobrenome">
-                    </div>
-                  </form>
+                  <label for="nome">Nome completo</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Nome Sobrenome" onkeyup="validaNome()">
+                  <div id="txtNome"></div>
+                </form>
+              </div>
                 <form>
                     <div class="form-group">
                     <label for="exampleFormControlInput1">Endereço de email</label>
                     <input type="email" class="form-control" id="staticEmail" placeholder="nome@exemplo.com">
+                    <div id="txtEmail"></div>
                     </div>
                     <div class="form-group">
                     <label for="exampleFormControlTextarea1">Mensagem</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua Mensagem"
-                    rows="3"></textarea>
+                    rows="3" maxlength="400"></textarea>
+                    <div id="txtAssunto"></div>
                     </div>
                     <div class="form-group d-flex justify-content-end">
                         <button class="btn btn-outline-success">Enviar</button>
@@ -231,7 +234,6 @@
 
      <!--Footer-->
      <footer>
-
         <div class="row mb-3">
             <div class="col-md-12 d-flex justify-content-center">
                     <a href="https://www.linkedin.com/in/vinicius-cardoso-743820157/" target="_blank" class="p-3">
@@ -252,7 +254,6 @@
                 </p>
             </div>
         </div>
-        
     </footer>
     <!--/Footer-->
 
@@ -261,5 +262,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Fim do Bootstrap-->
+    <script src="assets/script.js"></script>
   </body>
 </html>
