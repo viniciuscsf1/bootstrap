@@ -19,12 +19,11 @@
     <title>Olá, mundo!</title>
   </head>
   <body>
-    <h1 class= "text-center p-2">Paraísos brasileiros!</h1>
-    <h5 class= "text-center">Site em teste!</h5>
+    <h5 class= "text-center">Landing Page em fase testes!</h5>
 
     <!--NavBar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f1f1f1">
+        <a class="navbar-brand" href="#">Paraísos Nacionais</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,18 +37,22 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+              aria-haspopup="true" aria-expanded="false">
+                Destinos 
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Ação</a>
-                <a class="dropdown-item" href="#">Outra ação</a>
+                <a class="dropdown-item" href="#">Região Norte</a>
+                <a class="dropdown-item" href="#">Região Nordeste</a>
+                <a class="dropdown-item" href="#">Região Sudeste</a>
+                <a class="dropdown-item" href="#">Região Sul</a>
+                <a class="dropdown-item" href="#">Região Centro-Oeste</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <a class="dropdown-item" href="#">América do sul</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Desativado</a>
+              <a class="nav-link disabled" href="#contato">Entre em contato com a gente</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -185,7 +188,7 @@
      <!-- Formulario de Contato-->
         <div class="row mb-3">
             <div class="col-md-12">
-                <h4 class="text-center">
+                <h4 class="text-center" id="contato">
                     Entre em contato com a gente
                 </h4>
             </div>
@@ -197,23 +200,23 @@
                 <form>
                   <label for="nome">Nome completo</label>
                   <input type="text" class="form-control" id="nome" placeholder="Nome Sobrenome" onkeyup="validaNome()">
-                  <div id="txtNome"></div>
+                  <div id='txtNome'></div>
                 </form>
               </div>
                 <form>
                     <div class="form-group">
                     <label for="exampleFormControlInput1">Endereço de email</label>
-                    <input type="email" class="form-control" id="staticEmail" placeholder="nome@exemplo.com">
+                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" onkeyup="validaEmail()">
                     <div id="txtEmail"></div>
                     </div>
                     <div class="form-group">
                     <label for="exampleFormControlTextarea1">Mensagem</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua Mensagem"
-                    rows="3" maxlength="400"></textarea>
+                    <textarea class="form-control" id="assunto" placeholder="Digite sua Mensagem (Max: 100 caracteres)"
+                    rows="3" maxlength="400" onkeypress="validaAssunto()"></textarea>
                     <div id="txtAssunto"></div>
                     </div>
                     <div class="form-group d-flex justify-content-end">
-                        <button class="btn btn-outline-success">Enviar</button>
+                        <button class="btn btn-outline-success" type="button" onclick="enviar()">Enviar</button>
                     </div>
                 </form>
             </div>
